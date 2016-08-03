@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net"
+	"time"
 
 	"github.com/richarticle/golearn/grpc/protocol"
 
@@ -20,6 +21,7 @@ func (s *server) ComputeSum(ctx context.Context, req *protocol.Request) (*protoc
 	for _, v := range req.Numbers {
 		sum += v
 	}
+	time.Sleep(time.Second)
 	return &protocol.Response{Sum: sum}, nil
 }
 
