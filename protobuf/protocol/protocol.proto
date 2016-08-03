@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package protocol;
+
+message Test {
+	string label = 1;
+	int32 type = 2;
+	repeated int64 reps = 3;
+	Person man = 4;
+}
+
+message Person {
+	string name = 1;
+}
